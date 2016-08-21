@@ -15,6 +15,8 @@
 		25DC454D1D68A6DD0084A85A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25DC454B1D68A6DD0084A85A /* LaunchScreen.storyboard */; };
 		25DC45581D68A6DD0084A85A /* RealmDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DC45571D68A6DD0084A85A /* RealmDemoTests.swift */; };
 		25DC45631D68A6DD0084A85A /* RealmDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DC45621D68A6DD0084A85A /* RealmDemoUITests.swift */; };
+		25DC45711D68A8D50084A85A /* RealmBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DC45701D68A8D50084A85A /* RealmBean.swift */; };
+		BA7D3D3B9EF40E88C3714B09 /* Pods_RealmDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4863B6F61863835DE670A969 /* Pods_RealmDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		25DC455E1D68A6DD0084A85A /* RealmDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25DC45621D68A6DD0084A85A /* RealmDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDemoUITests.swift; sourceTree = "<group>"; };
 		25DC45641D68A6DD0084A85A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25DC45701D68A8D50084A85A /* RealmBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmBean.swift; sourceTree = "<group>"; };
+		4863B6F61863835DE670A969 /* Pods_RealmDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851136F65AC3E72F59D61055 /* Pods-RealmDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F08989C7307661D8319B586E /* Pods-RealmDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7D3D3B9EF40E88C3714B09 /* Pods_RealmDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,8 @@
 				25DC45561D68A6DD0084A85A /* RealmDemoTests */,
 				25DC45611D68A6DD0084A85A /* RealmDemoUITests */,
 				25DC453D1D68A6DD0084A85A /* Products */,
+				F63E94C6E8305ADC0FE837E7 /* Pods */,
+				9DB1EEB76C3B8EA99D5E1087 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +111,7 @@
 				25DC453F1D68A6DD0084A85A /* AppDelegate.swift */,
 				25DC45411D68A6DD0084A85A /* ViewController.swift */,
 				25DC45431D68A6DD0084A85A /* Main.storyboard */,
+				25DC45701D68A8D50084A85A /* RealmBean.swift */,
 				25DC45491D68A6DD0084A85A /* Assets.xcassets */,
 				25DC454B1D68A6DD0084A85A /* LaunchScreen.storyboard */,
 				25DC454E1D68A6DD0084A85A /* Info.plist */,
@@ -128,6 +138,23 @@
 			path = RealmDemoUITests;
 			sourceTree = "<group>";
 		};
+		9DB1EEB76C3B8EA99D5E1087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4863B6F61863835DE670A969 /* Pods_RealmDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F63E94C6E8305ADC0FE837E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F08989C7307661D8319B586E /* Pods-RealmDemo.debug.xcconfig */,
+				851136F65AC3E72F59D61055 /* Pods-RealmDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25DC45671D68A6DD0084A85A /* Build configuration list for PBXNativeTarget "RealmDemo" */;
 			buildPhases = (
+				9F8CB7B000D288601204844B /* [CP] Check Pods Manifest.lock */,
 				25DC45381D68A6DD0084A85A /* Sources */,
 				25DC45391D68A6DD0084A85A /* Frameworks */,
 				25DC453A1D68A6DD0084A85A /* Resources */,
+				1B1517E27BD71CAADBA326EF /* [CP] Embed Pods Frameworks */,
+				7C21B830638EE0CFAB87A028 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,12 +287,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B1517E27BD71CAADBA326EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C21B830638EE0CFAB87A028 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmDemo/Pods-RealmDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F8CB7B000D288601204844B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25DC45381D68A6DD0084A85A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				25DC45481D68A6DD0084A85A /* RealmDemo.xcdatamodeld in Sources */,
+				25DC45711D68A8D50084A85A /* RealmBean.swift in Sources */,
 				25DC45421D68A6DD0084A85A /* ViewController.swift in Sources */,
 				25DC45401D68A6DD0084A85A /* AppDelegate.swift in Sources */,
 			);
@@ -404,6 +483,7 @@
 		};
 		25DC45681D68A6DD0084A85A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F08989C7307661D8319B586E /* Pods-RealmDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealmDemo/Info.plist;
@@ -415,6 +495,7 @@
 		};
 		25DC45691D68A6DD0084A85A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 851136F65AC3E72F59D61055 /* Pods-RealmDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RealmDemo/Info.plist;
@@ -489,6 +570,7 @@
 				25DC45691D68A6DD0084A85A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25DC456A1D68A6DD0084A85A /* Build configuration list for PBXNativeTarget "RealmDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +579,7 @@
 				25DC456C1D68A6DD0084A85A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25DC456D1D68A6DD0084A85A /* Build configuration list for PBXNativeTarget "RealmDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +588,7 @@
 				25DC456F1D68A6DD0084A85A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
