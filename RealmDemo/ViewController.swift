@@ -58,19 +58,34 @@ extension ViewController {
 
 	func create() {
 		// 1:
-		realm.beginWrite()
-		for i in 0..<1000 {
-			let bean = RealmBean()
-			bean.bool.value = i.boolValue
-			bean.double.value = Double(i)
-			bean.int.value = i
-			bean.string = String(i)
+//		realm.beginWrite()
+//		for i in 0..<1000 {
+//			let bean = RealmBean()
+//			bean.bool.value = i.boolValue
+//			bean.double.value = Double(i)
+//			bean.int.value = i
+//			bean.string = String(i)
+//
+//			realm.add(bean)
+//
+//			print("添加:\(i+1) -> \(bean) isMain:\(bean.testFunc())")
+//		}
+//		try! realm.commitWrite()
 
-			realm.add(bean)
+		// 2:
+		try! realm.write {
+			for i in 0..<1000 {
+				let bean = RealmBean()
+				bean.bool.value = i.boolValue
+				bean.double.value = Double(i)
+				bean.int.value = i
+				bean.string = String(i)
 
-			print("添加:\(i+1) -> \(bean) isMain:\(bean.testFunc())")
+				realm.add(bean)
+
+				print("添加:\(i+1) -> \(bean) isMain:\(bean.testFunc())")
+			}
 		}
-		try! realm.commitWrite()
 	}
 
 	func modify() {
@@ -94,10 +109,15 @@ extension ViewController {
 	}
 
 	func delete() {
+		// 1:
+//		try! realm.write {
+//			realm.deleteAll()
+//		}
+
+		// 2:
 		try! realm.write {
-			realm.deleteAll()
+			realm.delete(realm.objects(RealmBean))
 		}
-		// realm.delete(realm.objects(RealmBean))
 	}
 
 	func initTime() {
