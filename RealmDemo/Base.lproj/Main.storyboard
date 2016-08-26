@@ -17,32 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EYP-Tu-awy">
-                                <rect key="frame" x="260" y="210" width="80" height="180"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EYP-Tu-awy">
+                                <rect key="frame" x="260" y="210" width="89" height="230"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpd-QX-Mbz">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dpd-QX-Mbz">
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
                                         <state key="normal" title="添加1000条"/>
                                         <connections>
                                             <action selector="onCreate" destination="BYZ-38-t0r" eventType="touchUpInside" id="iGf-yj-fxY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXq-7m-X8F">
-                                        <rect key="frame" x="0.0" y="50" width="80" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sb-SC-3Tk">
+                                        <rect key="frame" x="0.0" y="50" width="89" height="30"/>
+                                        <state key="normal" title="添加10000条"/>
+                                        <connections>
+                                            <action selector="onBigCreate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dkm-Ls-2jR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXq-7m-X8F">
+                                        <rect key="frame" x="0.0" y="100" width="89" height="30"/>
                                         <state key="normal" title="修改全部"/>
                                         <connections>
                                             <action selector="onModify" destination="BYZ-38-t0r" eventType="touchUpInside" id="edn-x2-M2J"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXH-Hx-UD6">
-                                        <rect key="frame" x="0.0" y="100" width="80" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXH-Hx-UD6">
+                                        <rect key="frame" x="0.0" y="150" width="89" height="30"/>
                                         <state key="normal" title="查询全部"/>
                                         <connections>
                                             <action selector="onQuery" destination="BYZ-38-t0r" eventType="touchUpInside" id="jvG-i2-EDM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irw-13-QlZ">
-                                        <rect key="frame" x="0.0" y="150" width="80" height="30"/>
+                                        <rect key="frame" x="0.0" y="200" width="89" height="30"/>
                                         <state key="normal" title="删除全部"/>
                                         <connections>
                                             <action selector="onDelete" destination="BYZ-38-t0r" eventType="touchUpInside" id="hch-cU-ikr"/>

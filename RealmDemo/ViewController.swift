@@ -24,6 +24,11 @@ class ViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+	@IBAction func onBigCreate(sender: AnyObject) {
+		initTime()
+		create(10000)
+		showTime()
+	}
 	@IBAction func onCreate() {
 		initTime()
 		create()
@@ -56,7 +61,7 @@ extension ViewController {
 
 	static var startTime: Double!
 
-	func create() {
+	func create(count: Int = 1000) {
 		// 1:
 //		realm.beginWrite()
 //		for i in 0..<1000 {
@@ -74,7 +79,7 @@ extension ViewController {
 
 		// 2:
 		try! realm.write {
-			for i in 0..<1000 {
+			for i in 0..<count {
 				let bean = RealmBean()
 				bean.bool.value = i.boolValue
 				bean.double.value = Double(i)
